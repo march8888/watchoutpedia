@@ -8,7 +8,7 @@ import TvPage from './pages/TvPage';
 
 function App() {
   return (
-    <Router>
+    <Router basename='watchoutpedia'>
       <Routes>
         <Route path='/' element={<MainPage/>}/>
         <Route path='/tv' element={<TvPage/>}/>
