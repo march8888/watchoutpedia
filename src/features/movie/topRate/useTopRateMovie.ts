@@ -1,0 +1,12 @@
+import {useQuery} from 'react-query';
+import {topRatedApi} from '../../../apis/movieApi';
+import {AxiosError,AxiosResponse} from 'axios';
+import { ListResponse, MovieDetail } from '../../../Types';
+
+const useTopRateMovie = () => {
+
+  return useQuery<AxiosResponse<ListResponse<MovieDetail>>, AxiosError>('topRateMovie',topRatedApi);
+
+}
+
+export default useTopRateMovie;
